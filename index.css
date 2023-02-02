@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1100px;
+  margin: auto;
+  padding-bottom: 4rem;
+  background-color: hsl(36, 100%, 99%);
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+html {
+  font-size: 15px;
+}
+
+p {
+  line-height: 1.8;
+  color: hsl(236, 13%, 42%);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem;
+}
+
+.header nav #menu-close {
+  background: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  z-index: 99999;
+  cursor: pointer;
+}
+
+.header nav {
+  opacity: 0;
+  z-index: -999;
+  transition: all 0.3s ease-in-out;
+}
+
+.header nav.open {
+  background-color: white;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 75vw;
+  padding: 1.25rem;
+  opacity: 1;
+  z-index: 99999999999;
+}
+
+.header nav ul {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header nav ul li {
+  margin: 1.5rem 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.header nav ul li:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+.header .menu-button button {
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.First {
+  padding: 1.25rem;
+  padding-top: 0;
+}
+
+.First h1 {
+  font-size: 2rem;
+  color: hsl(240, 100%, 5%);
+  margin: 1rem 0;
+  font-weight: 800;
+}
+
+.First div:first-child article p {
+  margin-bottom: 1rem;
+}
+
+.First div:first-child article button {
+  background-color: hsl(5, 85%, 63%);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.First div:first-child article button:hover {
+  background-color: hsl(240, 100%, 5%);
+  cursor: pointer;
+}
+
+.First>div:last-child {
+  background-color: hsl(240, 100%, 5%);
+  margin-top: 2rem;
+  padding: 1.25rem 1.25rem 0;
+}
+
+.First>div:last-child h2 {
+  color: hsl(35, 77%, 62%);
+}
+
+.First>div:last-child article {
+  padding: 1.25rem 0;
+}
+
+.First>div:last-child article:not(:last-child) {
+  border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+
+.First>div:last-child h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.First>div:last-child h3:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+
+.Third {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2.5rem;
+}
+
+.Third article {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.Third article img {
+  width: 120px;
+}
+
+.Third article span {
+  color: hsl(236, 13%, 42%);
+  font-weight: bold;
+  font-size: 2rem;
+  opacity: 75%;
+}
+
+.Third article h4 {
+  font-size: 1.25rem;
+  color: hsl(240, 100%, 5%);
+}
+
+@media (min-width:768px) {
+  .Third {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 4rem 1.5rem;
+  }
+
+  .header nav {
+    opacity: 1;
+    z-index: auto;
+    width: 100%;
+  }
+
+  .header nav.open {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+    z-index: auto;
+  }
+
+  .header #menu-close {
+    display: none;
+  }
+
+  .header nav ul {
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+    transform: translateY(0%);
+  }
+
+  .header nav ul li {
+    margin: 0;
+  }
+
+  .header .menu-button button {
+    display: none;
+  }
+
+  .First {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .First h1 {
+    font-size: 3rem;
+  }
+
+  .First>div:first-child article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    place-items: center;
+    margin-top: 2rem;
+  }
+
+  .First>div:last-child {
+    margin-top: 0;
+  }
+
+  .Third {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
